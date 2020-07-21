@@ -5,8 +5,7 @@ import java.io.FileReader;
 
 public class AbsolutFileSearch implements PropertiesFileSearch {
 	
-	private String path = "D:\\programacion\\eclipse-workspace\\Initializer\\src\\main\\java\\com"
-			+ "\\APILoader\\Config\\file.properties";
+	private String path = "D:\\programacion\\eclipse-workspace\\PRUEBAPP2\\properties\\initializer.properties";
 	 
 	public AbsolutFileSearch() {
 	}			

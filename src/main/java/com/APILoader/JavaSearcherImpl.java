@@ -76,7 +76,6 @@ public class JavaSearcherImpl implements JavaSearcher {
 	private String stringParse(String toParse) {
 		toParse = toParse.replace('/', '.');
 		toParse = toParse.replace(".class", "");
-		System.out.println(toParse);
 		return toParse;
 		
 	}
