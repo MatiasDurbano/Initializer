@@ -3,10 +3,10 @@ import java.util.Map;
 
 import com.apiloader.JavaSearcher;
 import com.apiloader.JavaSearcherImpl;
-import com.dependenciesloader.DependenciesLoader;
-import com.dependenciesloader.DependenciesLoaderImpl;
 import com.instancebuilder.InstanceBuilder;
 import com.instancebuilder.InstanceBuilderImpl;
+import com.instancebuilder.dependenciesloader.DependenciesLoader;
+import com.instancebuilder.dependenciesloader.DependenciesLoaderImpl;
 
 public class main {
 

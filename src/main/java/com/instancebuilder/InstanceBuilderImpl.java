@@ -10,8 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import com.dependenciesloader.DependenciesLoader;
-import com.dependenciesloader.DependenciesLoaderImpl;
+import com.instancebuilder.dependenciesloader.DependenciesLoader;
+import com.instancebuilder.dependenciesloader.DependenciesLoaderImpl;
 import com.interfaces.Network;
 
 
@@ -28,7 +28,7 @@ public class InstanceBuilderImpl implements InstanceBuilder{
 		List<Object> networkObjects = new ArrayList<Object>();
 		
 		try {
-			ClassLoader classLoader = dependenciesLoader.loadDependency();
+			ClassLoader classLoader = dependenciesLoader.loadDependencies();
 			for (Map.Entry<File, String> entry : files.entrySet()) {			
 				classLoader = URLClassLoader.newInstance(new URL[]{entry.getKey().toURI().toURL()},
 						classLoader);

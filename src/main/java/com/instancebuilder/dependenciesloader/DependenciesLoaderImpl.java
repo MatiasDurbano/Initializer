@@ -1,4 +1,4 @@
-package com.dependenciesloader;
+package com.instancebuilder.dependenciesloader;
 
 import java.io.File;
 import java.io.IOException;
@@ -26,7 +26,7 @@ public class DependenciesLoaderImpl implements DependenciesLoader {
 	}
 	
 	@Override
-	public ClassLoader loadDependency() {
+	public ClassLoader loadDependencies() {
 		try (Stream<Path> paths = Files.walk(Paths.get(this.pathDependencies))) {	
 		    paths
 		        .filter(Files -> Files.getFileName().toString().contains(".jar") )
