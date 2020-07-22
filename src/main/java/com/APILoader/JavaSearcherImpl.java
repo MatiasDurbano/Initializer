@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.jar.JarFile;
 import java.util.stream.Stream;
 
-import com.APILoader.Config.PropertiesLoader;
+import com.Config.PropertiesLoader;
 
 
 public class JavaSearcherImpl implements JavaSearcher {
@@ -22,8 +22,7 @@ public class JavaSearcherImpl implements JavaSearcher {
 	private String fileToFind;
 	
 	public JavaSearcherImpl() {
-		this.fileSearch=new PropertiesLoader();
-		this.fileSearch.readProperties();
+		this.fileSearch = PropertiesLoader.getPropertiesLoader();
 		this.path = fileSearch.getDataConfig().getPath();
 		this.fileToFind = fileSearch.getDataConfig().getFile();
 		this.files= new HashMap<File,String>();
@@ -31,7 +30,6 @@ public class JavaSearcherImpl implements JavaSearcher {
 	
 	public JavaSearcherImpl(PropertiesLoader fileSearch) {
 		this.fileSearch = fileSearch;
-		this.fileSearch.readProperties();
 		this.path = this.fileSearch.getDataConfig().getPath();
 		this.fileToFind = this.fileSearch.getDataConfig().getFile();
 		this.files= new HashMap<File,String>();

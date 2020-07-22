@@ -10,7 +10,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.stream.Stream;
 
-import com.APILoader.Config.PropertiesLoader;
+import com.Config.PropertiesLoader;
 
 public class DependencyLoaderImpl implements DependencyLoader {
 	
@@ -19,8 +19,7 @@ public class DependencyLoaderImpl implements DependencyLoader {
 	private ClassLoader classLoader;
 	
 	public DependencyLoaderImpl() {
-		fileSearch = new PropertiesLoader();
-		this.fileSearch.readProperties();
+		fileSearch = PropertiesLoader.getPropertiesLoader();
 		this.pathDependencies = fileSearch.getDataConfig().getDependencies();
 		classLoader = ClassLoader.getSystemClassLoader();
 		

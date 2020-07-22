@@ -6,24 +6,19 @@ import org.junit.jupiter.api.Test;
 
 import com.APILoader.JavaSearcher;
 import com.APILoader.JavaSearcherImpl;
-import com.APILoader.Config.PropertiesLoader;
+import com.Config.PropertiesLoader;
 
 class testApiLoader {
 	
-	
-	@Test()
-	void dataConfigNull() {
-		PropertiesLoader fileSearch = new PropertiesLoader();
-		fileSearch.setAddress("H:\\NoEXISTO");
-		assertEquals("",fileSearch.getDataConfig().getFile());
-		assertEquals("",fileSearch.getDataConfig().getPath());		
-	}
+	PropertiesLoader fileSearch = PropertiesLoader.getPropertiesLoader();
 	
 	@Test()
 	void dataConfigNotNull() {
 		//leo todo desde el path por default
-		PropertiesLoader fileSearch = new PropertiesLoader();
-		fileSearch.readProperties();
+		//path por default
+		// por cuestiones de ser un singleton puede traer conflicto en los test 
+		// por eso se lo paso como parametro
+		fileSearch.setAddress("D:\\programacion\\eclipse-workspace\\PRUEBAPP2\\properties\\initializer.properties");
 		assertNotNull(fileSearch.getDataConfig().getFile());
 		assertEquals("NetworkImpl",fileSearch.getDataConfig().getFile());
 		
@@ -33,15 +28,29 @@ class testApiLoader {
 	
 	@Test()
 	void javaSearcherImplDefault() {
+		//path por default
+		// por cuestiones de ser un singleton puede traer conflicto en los test 
+		// por eso se lo paso como parametro
+		fileSearch.setAddress("D:\\programacion\\eclipse-workspace\\PRUEBAPP2\\properties\\initializer.properties");
 		JavaSearcher java = new JavaSearcherImpl();
+		System.out.println(java.searchFiles().size());
 		assertTrue(java.searchFiles().size()>0);
+	}
+	
+
+	@Test()
+	void dataConfigNull() {
+		PropertiesLoader fileSearch = PropertiesLoader.getPropertiesLoader();;
+		fileSearch.setAddress("H:\\NoEXISTO");
+		assertEquals("",fileSearch.getDataConfig().getFile());
+		assertEquals("",fileSearch.getDataConfig().getPath());		
 	}
 	
 	@Test()
 	void javaSearcherImplNotDefault() {
 		//se pasa por parametro un properties con un mal path,
 		//no deberia encontrar archivos
-		PropertiesLoader fileSearch = new PropertiesLoader();
+		PropertiesLoader fileSearch = PropertiesLoader.getPropertiesLoader();
 		fileSearch.setAddress("H:\\NoEXISTO");
 		JavaSearcher java = new JavaSearcherImpl(fileSearch);
 		assertTrue(java.searchFiles().size()==0);

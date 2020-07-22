@@ -1,4 +1,4 @@
-package com.APILoader.Config;
+package com.Config;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;

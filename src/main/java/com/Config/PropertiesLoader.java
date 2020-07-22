@@ -1,4 +1,4 @@
-package com.APILoader.Config;
+package com.Config;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -11,15 +11,28 @@ public class PropertiesLoader {
 	private Properties properties;
 	private DataConfig data;
 	
-	public PropertiesLoader() {
+	private static PropertiesLoader propertiesLoader;
+	
+	public  static PropertiesLoader getPropertiesLoader() {
+		 
+		 if (propertiesLoader==null) {
+			 propertiesLoader=new PropertiesLoader();
+		 }
+		 
+		 return propertiesLoader;
+		 }
+	
+	private  PropertiesLoader() {
 		
 		this.fileSercher = new AbsolutFileSearch();
 		this.properties = new Properties();
 		this.data = new DataConfig();
+		this.readProperties();
 	}
 	
-	public void readProperties() {
+	private void readProperties() {
 		try {
+			this.data = new DataConfig();
 			FileReader file = fileSercher.getFileAddress();
 			properties.load(file);			
 			this.readPath();
@@ -31,7 +44,7 @@ public class PropertiesLoader {
 		}
 	}
 	
-	public void readPath() {
+	private void readPath() {
 		String path = properties.getProperty("path");
 		if(path == null) 	
 			System.out.println("Directorio no definido");				
@@ -39,7 +52,7 @@ public class PropertiesLoader {
 		
 	}
 	
-	public void readFile() {
+	private void readFile() {
 		String file = properties.getProperty("archivo");
 		if(file == null) 	
 			System.out.println("archivo no definido");				
@@ -47,7 +60,7 @@ public class PropertiesLoader {
 		
 	}
 	
-	public void readDependencies() {
+	private void readDependencies() {
 		String dependency = properties.getProperty("dependencies");
 		if(dependency == null) 	
 			System.out.println("archivo no definido");				
@@ -60,8 +73,8 @@ public class PropertiesLoader {
 	}
 	
 	public void setAddress(String Address) {
-		fileSercher.setAddress(Address);
-		readProperties();
+		this.fileSercher.setAddress(Address);
+		this.readProperties();
 	}
 	
 }

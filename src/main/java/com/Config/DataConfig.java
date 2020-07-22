@@ -1,4 +1,4 @@
-package com.APILoader.Config;
+package com.Config;
 
 
 public class DataConfig {

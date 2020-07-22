@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 
 import com.APILoader.JavaSearcher;
 import com.APILoader.JavaSearcherImpl;
-import com.APILoader.Config.PropertiesLoader;
+import com.Config.PropertiesLoader;
 import com.InstanceBuilder.InstanceBuilder;
 import com.InstanceBuilder.InstanceBuilderImpl;
 import com.Interfaces.Network;
@@ -35,7 +35,7 @@ class testInstanceBuilder {
 
 	@Test
 	void instanceBuilderNoDefault() {
-		PropertiesLoader fileSearch = new PropertiesLoader();
+		PropertiesLoader fileSearch = PropertiesLoader.getPropertiesLoader();
 		fileSearch.setAddress("H:\\NoEXISTO");
 		JavaSearcher searcher = new JavaSearcherImpl(fileSearch);
 		InstanceBuilder builder = new InstanceBuilderImpl();
