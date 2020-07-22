@@ -1,4 +1,4 @@
-package com.config;
+package com.configloader;
 
 
 public class DataConfig {

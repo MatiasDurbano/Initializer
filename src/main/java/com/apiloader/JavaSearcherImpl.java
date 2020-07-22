@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.jar.JarFile;
 import java.util.stream.Stream;
 
-import com.config.PropertiesLoader;
+import com.configloader.PropertiesLoader;
 
 
 public class JavaSearcherImpl implements JavaSearcher {

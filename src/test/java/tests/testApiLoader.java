@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import com.apiloader.JavaSearcher;
 import com.apiloader.JavaSearcherImpl;
-import com.config.PropertiesLoader;
+import com.configloader.PropertiesLoader;
 
 class testApiLoader {
 	

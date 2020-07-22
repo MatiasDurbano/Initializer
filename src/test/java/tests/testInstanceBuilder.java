@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 
 import com.apiloader.JavaSearcher;
 import com.apiloader.JavaSearcherImpl;
-import com.config.PropertiesLoader;
+import com.configloader.PropertiesLoader;
 import com.instancebuilder.InstanceBuilder;
 import com.instancebuilder.InstanceBuilderImpl;
 import com.interfaces.Network;

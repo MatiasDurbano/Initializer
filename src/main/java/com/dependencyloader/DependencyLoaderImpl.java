@@ -10,7 +10,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.stream.Stream;
 
-import com.config.PropertiesLoader;
+import com.configloader.PropertiesLoader;
 
 public class DependencyLoaderImpl implements DependencyLoader {
 	
