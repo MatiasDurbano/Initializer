@@ -10,9 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import com.Interfaces.Network;
 import com.dependencyloader.DependencyLoader;
 import com.dependencyloader.DependencyLoaderImpl;
+import com.interfaces.Network;
 
 
 public class InstanceBuilderImpl implements InstanceBuilder{

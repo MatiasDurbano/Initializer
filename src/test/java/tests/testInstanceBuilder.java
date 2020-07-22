@@ -10,12 +10,12 @@ import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
-import com.Interfaces.Network;
 import com.apiloader.JavaSearcher;
 import com.apiloader.JavaSearcherImpl;
 import com.config.PropertiesLoader;
 import com.instancebuilder.InstanceBuilder;
 import com.instancebuilder.InstanceBuilderImpl;
+import com.interfaces.Network;
 
 
 
