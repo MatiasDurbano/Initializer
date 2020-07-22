@@ -1,4 +1,4 @@
-package com.InstanceBuilder;
+package com.instancebuilder;
 
 import java.io.File;
 import java.lang.reflect.Constructor;
@@ -10,9 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import com.DependencyLoader.DependencyLoader;
-import com.DependencyLoader.DependencyLoaderImpl;
 import com.Interfaces.Network;
+import com.dependencyloader.DependencyLoader;
+import com.dependencyloader.DependencyLoaderImpl;
 
 
 public class InstanceBuilderImpl implements InstanceBuilder{

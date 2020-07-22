@@ -1,12 +1,10 @@
-package com.Initializer;
+package com.initializer;
 import java.util.List;
 
-import com.APILoader.JavaSearcher;
-import com.APILoader.JavaSearcherImpl;
-import com.DependencyLoader.DependencyLoader;
-import com.DependencyLoader.DependencyLoaderImpl;
-import com.InstanceBuilder.InstanceBuilder;
-import com.InstanceBuilder.InstanceBuilderImpl;
+import com.apiloader.JavaSearcher;
+import com.apiloader.JavaSearcherImpl;
+import com.instancebuilder.InstanceBuilder;
+import com.instancebuilder.InstanceBuilderImpl;
 
 
 

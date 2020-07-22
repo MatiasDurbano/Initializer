@@ -1,4 +1,4 @@
-package com.Initializer;
+package com.initializer;
 import java.util.List;
 
 public interface Initializer {

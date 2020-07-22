@@ -1,4 +1,4 @@
-package com.APILoader;
+package com.apiloader;
 
 import java.io.File;
 import java.util.Map;

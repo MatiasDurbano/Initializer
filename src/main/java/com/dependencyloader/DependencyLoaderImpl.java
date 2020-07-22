@@ -1,4 +1,4 @@
-package com.DependencyLoader;
+package com.dependencyloader;
 
 import java.io.File;
 import java.io.IOException;
@@ -10,7 +10,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.stream.Stream;
 
-import com.Config.PropertiesLoader;
+import com.config.PropertiesLoader;
 
 public class DependencyLoaderImpl implements DependencyLoader {
 	

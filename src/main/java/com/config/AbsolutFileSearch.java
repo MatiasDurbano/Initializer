@@ -1,4 +1,4 @@
-package com.Config;
+package com.config;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;

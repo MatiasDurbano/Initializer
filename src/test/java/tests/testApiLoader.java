@@ -4,9 +4,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import com.APILoader.JavaSearcher;
-import com.APILoader.JavaSearcherImpl;
-import com.Config.PropertiesLoader;
+import com.apiloader.JavaSearcher;
+import com.apiloader.JavaSearcherImpl;
+import com.config.PropertiesLoader;
 
 class testApiLoader {
 	

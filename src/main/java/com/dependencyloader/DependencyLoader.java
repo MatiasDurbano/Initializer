@@ -1,4 +1,4 @@
-package com.DependencyLoader;
+package com.dependencyloader;
 
 public interface DependencyLoader {
 	

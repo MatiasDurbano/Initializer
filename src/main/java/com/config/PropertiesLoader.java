@@ -1,4 +1,4 @@
-package com.Config;
+package com.config;
 
 import java.io.FileReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package com.APILoader;
+package com.apiloader;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.jar.JarFile;
 import java.util.stream.Stream;
 
-import com.Config.PropertiesLoader;
+import com.config.PropertiesLoader;
 
 
 public class JavaSearcherImpl implements JavaSearcher {

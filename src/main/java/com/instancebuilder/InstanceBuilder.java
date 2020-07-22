@@ -1,4 +1,4 @@
-package com.InstanceBuilder;
+package com.instancebuilder;
 
 import java.io.File;
 import java.util.List;
