@@ -1,4 +1,4 @@
-package com.dependencyloader;
+package com.dependenciesloader;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,13 +12,13 @@ import java.util.stream.Stream;
 
 import com.configloader.PropertiesLoader;
 
-public class DependencyLoaderImpl implements DependencyLoader {
+public class DependenciesLoaderImpl implements DependenciesLoader {
 	
 	private PropertiesLoader fileSearch;
 	private String pathDependencies ;
 	private ClassLoader classLoader;
 	
-	public DependencyLoaderImpl() {
+	public DependenciesLoaderImpl() {
 		fileSearch = PropertiesLoader.getPropertiesLoader();
 		this.pathDependencies = fileSearch.getDataConfig().getDependencies();
 		classLoader = ClassLoader.getSystemClassLoader();

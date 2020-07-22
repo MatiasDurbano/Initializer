@@ -3,8 +3,8 @@ import java.util.Map;
 
 import com.apiloader.JavaSearcher;
 import com.apiloader.JavaSearcherImpl;
-import com.dependencyloader.DependencyLoader;
-import com.dependencyloader.DependencyLoaderImpl;
+import com.dependenciesloader.DependenciesLoader;
+import com.dependenciesloader.DependenciesLoaderImpl;
 import com.instancebuilder.InstanceBuilder;
 import com.instancebuilder.InstanceBuilderImpl;
 

@@ -10,22 +10,25 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import com.dependencyloader.DependencyLoader;
-import com.dependencyloader.DependencyLoaderImpl;
+import com.dependenciesloader.DependenciesLoader;
+import com.dependenciesloader.DependenciesLoaderImpl;
 import com.interfaces.Network;
 
 
 public class InstanceBuilderImpl implements InstanceBuilder{
 	
-	public InstanceBuilderImpl() {}
+	private DependenciesLoader dependenciesLoader;
+	
+	public InstanceBuilderImpl() {
+		dependenciesLoader = new DependenciesLoaderImpl();	
+	}
 
 	@Override
 	public List<Object> createInstances(Map<File,String> files) {
 		List<Object> networkObjects = new ArrayList<Object>();
-		DependencyLoader dependencyLoader = new DependencyLoaderImpl();	
 		
 		try {
-			ClassLoader classLoader = dependencyLoader.loadDependency();
+			ClassLoader classLoader = dependenciesLoader.loadDependency();
 			for (Map.Entry<File, String> entry : files.entrySet()) {			
 				classLoader = URLClassLoader.newInstance(new URL[]{entry.getKey().toURI().toURL()},
 						classLoader);
