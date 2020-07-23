@@ -28,13 +28,6 @@ public class JavaSearcherImpl implements JavaSearcher {
 		this.files= new HashMap<File,String>();
 	}
 	
-	public JavaSearcherImpl(PropertiesLoader fileSearch) {
-		this.fileSearch = fileSearch;
-		this.path = this.fileSearch.getDataConfig().getPath();
-		this.fileToFind = this.fileSearch.getDataConfig().getFile();
-		this.files= new HashMap<File,String>();
-	}
-	
 	@Override
 	public Map<File,String> searchFiles() {
 		

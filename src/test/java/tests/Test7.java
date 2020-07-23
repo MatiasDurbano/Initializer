@@ -19,31 +19,11 @@ import com.interfaces.Network;
 
 
 
-class testInstanceBuilder {
+class Test7 {
+	
 	
 	@Test
-	void instanceBuilderDefault() {
-		JavaSearcher searcherDefault = new JavaSearcherImpl();
-		InstanceBuilder builder = new InstanceBuilderImpl();
-		List<Object> objects = new ArrayList<Object>();
-		objects=builder.createInstances(searcherDefault.searchFiles());
-		assertTrue(objects.size()>0);
-		for( Object obj : objects) {
-			assertTrue(obj instanceof Network);
-		}
-	}
-
-	@Test
-	void instanceBuilderNoDefault() {
-		PropertiesLoader fileSearch = PropertiesLoader.getPropertiesLoader();
-		fileSearch.setAddress("H:\\NoEXISTO");
-		JavaSearcher searcher = new JavaSearcherImpl(fileSearch);
-		InstanceBuilder builder = new InstanceBuilderImpl();
-		assertTrue(builder.createInstances(searcher.searchFiles()).size()==0);
-	}
-	
-	@Test
-	void incorrectDictionary() {
+	void test() {
 		Map<File, String> map = new HashMap<File, String>();
 		map.put(new File("h:/noexisto"), "com.noexisto.claseInexsistente");
 		
