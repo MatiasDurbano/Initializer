@@ -37,7 +37,7 @@ public class PropertiesLoader {
 			properties.load(file);			
 			this.readPath();
 			this.readFile();
-			this.readDependencies();
+			this.readDependency();
 			}
 		catch (IOException e) {
 			System.out.println("no se puede leer el archivo properties en initializer");
@@ -53,14 +53,14 @@ public class PropertiesLoader {
 	}
 	
 	private void readFile() {
-		String file = properties.getProperty("archivo");
+		String file = properties.getProperty("file");
 		if(file == null) 	
 			System.out.println("archivo no definido");				
 		data.setFile(file);;
 		
 	}
 	
-	private void readDependencies() {
+	private void readDependency() {
 		String dependency = properties.getProperty("dependencies");
 		if(dependency == null) 	
 			System.out.println("archivo no definido");				

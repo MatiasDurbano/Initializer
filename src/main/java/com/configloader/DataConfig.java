@@ -5,12 +5,12 @@ public class DataConfig {
 	
 	private String path;
 	private String file;
-	private String pathDependencies;
+	private String dependenciesPath;
 	
 	public DataConfig() {
 		this.path = "";
 		this.file = "";
-		this.pathDependencies = "";
+		this.dependenciesPath = "";
 	}
 
 	public String getPath() {
@@ -29,12 +29,12 @@ public class DataConfig {
 		this.file = filePath;
 	}
 	
-	public void setDependencies(String pathDependencies) {
-		 this.pathDependencies = pathDependencies;
+	public void setDependencies(String dependenciespath) {
+		 this.dependenciesPath = dependenciespath;
 	}
 	
 	public String getDependencies() {
-		 return this.pathDependencies;
+		 return this.dependenciesPath;
 	}
 
 	

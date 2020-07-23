@@ -33,7 +33,6 @@ class testApiLoader {
 		// por eso se lo paso como parametro
 		fileSearch.setAddress("D:\\programacion\\eclipse-workspace\\PRUEBAPP2\\properties\\initializer.properties");
 		JavaSearcher java = new JavaSearcherImpl();
-		System.out.println(java.searchFiles().size());
 		assertTrue(java.searchFiles().size()>0);
 	}
 	
