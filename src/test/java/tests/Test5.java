@@ -21,7 +21,7 @@ class Test5 {
 		InstanceBuilder builder = new InstanceBuilderImpl();
 		List<Object> objects = new ArrayList<Object>();
 		objects=builder.createInstances(searcherDefault.searchFiles());
-		assertTrue(objects.size()>0);
+		assertTrue(objects.size()==1);
 		for( Object obj : objects) {
 			assertTrue(obj instanceof Network);
 		}
